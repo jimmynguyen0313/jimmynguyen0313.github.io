@@ -87,6 +87,8 @@ window.EXPERIENCE = [
     role: "Software Support Engineer",
     org: "Apple",
     detail: "Career Experience",
+    // Optional: a single-color SVG, drawn in the text color so it suits both themes. Delete to hide.
+    logo: "assets/logos/apple.svg",
     date: "Jun 2026 – Present",
     points: [
       "Designed and built a full-stack internal web app (Python, FastAPI, PostgreSQL) used across retail locations to provision hardware devices, replacing a manual process with self-service.",

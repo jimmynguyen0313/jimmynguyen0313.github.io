@@ -159,9 +159,17 @@
     $("#experience-list").append(
       el("article", { class: "job reveal" }, [
         el("div", { class: "job__head" }, [
-          el("div", {}, [
-            el("h3", { class: "job__role", text: x.role }),
-            el("p", { class: "job__org", text: [x.org, x.detail].filter(Boolean).join(" · ") }),
+          el("div", { class: "job__title" }, [
+            x.logo && el("span", {
+              class: "job__logo",
+              role: "img",
+              "aria-label": `${x.org} logo`,
+              style: `--logo: url("${x.logo}")`,
+            }),
+            el("div", {}, [
+              el("h3", { class: "job__role", text: x.role }),
+              el("p", { class: "job__org", text: [x.org, x.detail].filter(Boolean).join(" · ") }),
+            ]),
           ]),
           el("span", { class: "mono job__date", text: x.date }),
         ]),
