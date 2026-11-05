@@ -57,16 +57,24 @@ window.PROJECTS = [
     note: "The demo's API runs on a free tier, so the first load can take about 30 seconds.",
   },
   {
-    name: "Credit Score Evaluation",
-    date: "Mar 2025",
+    name: "Credit Score Explorer",
+    date: "Mar 2025 · rebuilt 2026",
     description:
-      "A machine learning model that predicts credit scores from financial and demographic data, presented on a web page built by a team of five that I led.",
+      "An interactive ML app that predicts a credit score band, explains which inputs drive it, and finds the smallest change that would improve it. Started as a team project I led and later rebuilt end to end.",
     highlights: [
-      "Engineered features combining financial history, demographics and other credit signals",
-      "Trained and compared scikit-learn models, including multinomial logistic regression",
-      "Evaluated models on F1-score, precision and recall; the final model reached 95% accuracy",
+      "Ordinal gradient-boosting model with monotonic constraints, so more debt or late payments can never improve a prediction",
+      "Model-agnostic explanations and what-if search, e.g. \"debt $3,400 → $1,200 moves you to Standard\"",
+      "66% accuracy on held-out customers vs. a 53% baseline, evaluated with a customer-level split to avoid leakage",
+      "Data cleaning for a deliberately messy 100k-row dataset, with unit tests and a reproducible training pipeline",
     ],
-    tags: ["Python", "scikit-learn", "HTML/CSS", "JavaScript"],
+    tags: ["Python", "scikit-learn", "Streamlit", "pandas"],
+    images: [
+      { src: "assets/projects/credit-explore.webp", alt: "Prediction, drivers and improvement suggestions for a sample profile" },
+      { src: "assets/projects/credit-model.webp", alt: "Model comparison table and confusion matrix" },
+    ],
+    demo: "https://credit-score-project-jphbcd7a8zune8hfdjizno.streamlit.app",
+    repo: "https://github.com/jimmynguyen0313/Credit-Score-Project",
+    note: "The demo sleeps when idle, so it can take a few seconds to wake up.",
   },
 ];
 
