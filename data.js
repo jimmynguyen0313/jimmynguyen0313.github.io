@@ -22,7 +22,7 @@ window.SITE = {
     linkedin: "https://www.linkedin.com/in/jimmynguyen0313",
     email: "jimmynguyen0765@gmail.com",
     // Drop a PDF at assets/resume.pdf and set this to "assets/resume.pdf".
-    resume: null,
+    resume: "assets/Jimmy_Nguyen_Resume.pdf",
   },
 };
 
