@@ -1,42 +1,6 @@
 /* ── Tokens ─────────────────────────────────────────────── */
+/* Dark is the default; [data-theme="light"] switches to light. */
 :root {
-  --bg: #fbfbfa;
-  --bg-alt: #f3f3f0;
-  --surface: #ffffff;
-  --text: #16181d;
-  --muted: #5d6270;
-  --faint: #8a8f9c;
-  --border: #e3e3de;
-  --accent: #2e5bdb;
-  --accent-hover: #2149bb;
-  --accent-soft: #e8eefc;
-  --on-accent: #ffffff;
-  --shadow: 0 1px 2px rgb(16 18 24 / 0.04), 0 8px 24px rgb(16 18 24 / 0.06);
-  --radius: 14px;
-  --maxw: 1080px;
-  --font: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
-  color-scheme: light;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0f1115;
-    --bg-alt: #14171c;
-    --surface: #181b21;
-    --text: #e8e9ec;
-    --muted: #a3a8b4;
-    --faint: #7a808d;
-    --border: #2a2e36;
-    --accent: #7c9cff;
-    --accent-hover: #9bb4ff;
-    --accent-soft: #1d2540;
-    --on-accent: #0f1115;
-    --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 8px 24px rgb(0 0 0 / 0.3);
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
   --bg: #0f1115;
   --bg-alt: #14171c;
   --surface: #181b21;
@@ -49,7 +13,26 @@
   --accent-soft: #1d2540;
   --on-accent: #0f1115;
   --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 8px 24px rgb(0 0 0 / 0.3);
+  --radius: 14px;
+  --maxw: 1080px;
+  --font: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
   color-scheme: dark;
+}
+:root[data-theme="light"] {
+  --bg: #fbfbfa;
+  --bg-alt: #f3f3f0;
+  --surface: #ffffff;
+  --text: #16181d;
+  --muted: #5d6270;
+  --faint: #8a8f9c;
+  --border: #e3e3de;
+  --accent: #2e5bdb;
+  --accent-hover: #2149bb;
+  --accent-soft: #e8eefc;
+  --on-accent: #ffffff;
+  --shadow: 0 1px 2px rgb(16 18 24 / 0.04), 0 8px 24px rgb(16 18 24 / 0.06);
+  color-scheme: light;
 }
 
 /* ── Base ───────────────────────────────────────────────── */
@@ -92,13 +75,10 @@ svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width:
 .nav__links a:hover { color: var(--text); }
 .theme-toggle { background: none; border: 1px solid var(--border); color: var(--muted); width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; cursor: pointer; }
 .theme-toggle:hover { color: var(--text); }
-.theme-toggle .icon-sun { display: none; }
-:root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
-:root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .theme-toggle .icon-sun { display: block; }
-  :root:not([data-theme="light"]) .theme-toggle .icon-moon { display: none; }
-}
+/* Show the icon for the theme you'd switch to. */
+.theme-toggle .icon-moon { display: none; }
+:root[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+:root[data-theme="light"] .theme-toggle .icon-moon { display: block; }
 
 /* ── Hero / about ───────────────────────────────────────── */
 .hero {
