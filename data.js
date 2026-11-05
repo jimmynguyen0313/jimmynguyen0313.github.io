@@ -10,7 +10,7 @@ window.SITE = {
 
   // Put a square photo at assets/profile.jpg and set this to "assets/profile.jpg".
   // While it's null, your initials are shown instead.
-  photo: null,
+  photo: "assets/profile.jpg",
 
   bio: [
     "I'm a software engineer who likes building things end to end — from the database and API to the interface people actually use.",
