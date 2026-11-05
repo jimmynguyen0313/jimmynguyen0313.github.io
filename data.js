@@ -38,19 +38,19 @@ window.SITE = {
 window.PROJECTS = [
   {
     name: "Pokémon Sealed Inventory Tracker",
-    date: "Jan 2026",
+    date: "Jan 2026 · updated Nov 2026",
     description:
-      "A full-stack app for tracking a Pokémon sealed-product collection: quantities, purchase prices and market value, all in one dashboard.",
+      "A full-stack portfolio tracker for sealed Pokémon TCG products: what you paid, what it's worth today, and how its value has changed over time.",
     highlights: [
-      "FastAPI REST backend with inventory CRUD and category management",
-      "Caches market prices from an external pricing API for portfolio valuation",
-      "SQLite schema with indexes for fast search and aggregation",
-      "React frontend for product search, inventory updates and value tracking",
+      "Portfolio analytics: unrealized gain/loss, per-item return, allocation and a 24-month value history from a price-history model",
+      "Cut API latency at 10,000 holdings by up to 4× (74 → 19 ms) by moving aggregation into SQL and grouping holdings before valuing them",
+      "99% backend and 90% frontend test coverage (46 tests), enforced in GitHub Actions CI",
+      "React dashboard with hand-built SVG charts; Lighthouse 100 in all four categories",
     ],
-    tags: ["React", "Python", "FastAPI", "SQLite"],
+    tags: ["React", "Python", "FastAPI", "SQLite", "GitHub Actions"],
     images: [
-      { src: "assets/projects/pokemon-search.webp", alt: "Portfolio value summary and product search results" },
-      { src: "assets/projects/pokemon-inventory.webp", alt: "Inventory cards showing purchase price, market value and totals" },
+      { src: "assets/projects/pokemon-dashboard.webp", alt: "Portfolio totals and value-over-time chart" },
+      { src: "assets/projects/pokemon-holdings.webp", alt: "Allocation, top movers and sortable holdings table" },
     ],
     demo: "https://jimmynguyen0313.github.io/pokemon-inventory",
     repo: "https://github.com/jimmynguyen0313/pokemon-inventory",
