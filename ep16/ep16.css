@@ -1,0 +1,40 @@
+:root {
+  --bg: #e3ebe5;
+  --surface: #f4f8f5;
+  --ink: #1c2140;
+  --muted: #56607a;
+  --line: #c3d1c8;
+  --jade: #2e6b5f;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #131729;
+    --surface: #1b2036;
+    --ink: #e1eae4;
+    --muted: #9aa4be;
+    --line: #2e3552;
+    --jade: #86c7b6;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 17px/1.65 "Gowun Dodum", system-ui, sans-serif;
+}
+main { max-width: 680px; margin: 0 auto; padding: 40px 16px 64px; }
+h1, h2, h3 { font-family: "Gowun Batang", Georgia, serif; line-height: 1.25; }
+h1 { font-size: 2.1rem; margin: 0.4em 0 0.2em; }
+h2 { font-size: 1.35rem; margin: 2em 0 0.4em; }
+h3 { font-size: 1.1rem; margin: 1.4em 0 0.3em; }
+p, li { margin: 0.5em 0; }
+ul { padding-left: 1.2em; }
+a { color: var(--jade); }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
+.brand img { width: 56px; height: 56px; border-radius: 13px; }
+.brand span { font-family: "Gowun Batang", Georgia, serif; font-weight: 700; font-size: 1.4rem; }
+.muted { color: var(--muted); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 4px 20px; margin: 20px 0; }
+footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 0.9rem; }
